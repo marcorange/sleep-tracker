@@ -1,24 +1,189 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="sleep_tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eup-tw-vaf">
+                                <rect key="frame" x="70" y="489" width="181" height="47"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Profile">
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapProfile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GoM-Iy-b0y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sda-dh-kBQ">
+                                <rect key="frame" x="102" y="323" width="116" height="45.5"/>
+                                <color key="backgroundColor" red="0.85553050302393696" green="0.47009702929023173" blue="0.99911564590000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Submit">
+                                    <backgroundConfiguration key="background" cornerRadius="20"/>
+                                    <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="27"/>
+                                    <color key="baseForegroundColor" systemColor="systemIndigoColor"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="0RS-eJ-3Tv" kind="show" identifier="goToOK" id="Wdf-6O-EGt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ylk-eo-O5n">
+                                <rect key="frame" x="71" y="434" width="179" height="47"/>
+                                <color key="backgroundColor" red="0.19738273341556872" green="0.31559893818076479" blue="0.70773115061750314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Settings">
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapSettings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gpy-p3-sfk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3HF-or-WMQ">
+                                <rect key="frame" x="130" y="226" width="60" height="28"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="99" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p10-zw-jdJ">
+                                <rect key="frame" x="101" y="131" width="116" height="88"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <color key="tintColor" cyan="0.4620920718" magenta="0.026618631560000001" yellow="0.10754424329999999" black="0.0" alpha="1" colorSpace="deviceCMYK"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="65"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sleep duration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4k-Hk-m0I">
+                                <rect key="frame" x="80" y="88" width="161" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="3yL-9k-wgo"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="161" id="W9a-9O-QZj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.2827222049" green="0.44556277989999998" blue="0.99911564590000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="U4k-Hk-m0I" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="0.5" id="5DC-Xf-a9t"/>
+                            <constraint firstItem="Ylk-eo-O5n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="71" id="IdZ-3k-m4E"/>
+                            <constraint firstItem="Eup-tw-vaf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="JAC-ts-LB3"/>
+                            <constraint firstItem="3HF-or-WMQ" firstAttribute="top" secondItem="p10-zw-jdJ" secondAttribute="bottom" constant="7" id="Mbn-n4-jKx"/>
+                            <constraint firstItem="sda-dh-kBQ" firstAttribute="top" secondItem="3HF-or-WMQ" secondAttribute="bottom" constant="69" id="OEM-eg-6W2"/>
+                            <constraint firstItem="Eup-tw-vaf" firstAttribute="top" secondItem="Ylk-eo-O5n" secondAttribute="bottom" constant="8" symbolic="YES" id="Yeg-wd-NsZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ylk-eo-O5n" secondAttribute="trailing" constant="70" id="c3k-Yh-1tO"/>
+                            <constraint firstItem="3HF-or-WMQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="epT-PE-VUG"/>
+                            <constraint firstItem="p10-zw-jdJ" firstAttribute="top" secondItem="U4k-Hk-m0I" secondAttribute="bottom" constant="8" id="f08-du-hwB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eup-tw-vaf" secondAttribute="trailing" constant="69" id="hP0-zG-KKw"/>
+                            <constraint firstItem="sda-dh-kBQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mxu-vT-CGJ"/>
+                            <constraint firstItem="U4k-Hk-m0I" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="88" id="u1D-jK-4uf"/>
+                            <constraint firstItem="p10-zw-jdJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="-1" id="yrT-ha-RxP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Eup-tw-vaf" secondAttribute="bottom" constant="32" id="zVq-3e-nAh"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="hoursField" destination="p10-zw-jdJ" id="bqq-5c-zee"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-114" y="46"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="F8j-Hu-hn0">
+            <objects>
+                <viewController storyboardIdentifier="ok" id="0RS-eJ-3Tv" customClass="OKViewController" customModule="sleep_tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CBn-IZ-g0m" customClass="View">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6s-nq-a8O">
+                                <rect key="frame" x="29" y="319.5" width="263" height="52.5"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <color key="tintColor" systemColor="systemPurpleColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="OK, record">
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="28"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapOK:" destination="0RS-eJ-3Tv" eventType="touchUpInside" id="9pU-e3-4qb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've slept for X hours" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xtm-od-vNz">
+                                <rect key="frame" x="25" y="127" width="270" height="62.5"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hzg-nE-tAj"/>
+                        <color key="backgroundColor" red="0.53806847994888285" green="0.43877365563287363" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xtm-od-vNz" firstAttribute="leading" secondItem="hzg-nE-tAj" secondAttribute="leading" constant="25" id="5zJ-X4-awU"/>
+                            <constraint firstItem="d6s-nq-a8O" firstAttribute="leading" secondItem="hzg-nE-tAj" secondAttribute="leading" constant="29" id="TbL-VA-QCs"/>
+                            <constraint firstItem="hzg-nE-tAj" firstAttribute="trailing" secondItem="d6s-nq-a8O" secondAttribute="trailing" constant="28" id="Yg8-bX-lEP"/>
+                            <constraint firstItem="hzg-nE-tAj" firstAttribute="bottom" secondItem="d6s-nq-a8O" secondAttribute="bottom" constant="176" id="eBu-jy-HjJ"/>
+                            <constraint firstItem="Xtm-od-vNz" firstAttribute="top" secondItem="hzg-nE-tAj" secondAttribute="top" constant="127" id="j5S-b3-JNL"/>
+                            <constraint firstItem="hzg-nE-tAj" firstAttribute="trailing" secondItem="Xtm-od-vNz" secondAttribute="trailing" constant="25" id="ycV-lM-Xj3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ajm-oF-TEn"/>
+                    <connections>
+                        <outlet property="messageLabel" destination="Xtm-od-vNz" id="OIE-Ig-cok"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MsQ-eZ-PqX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="690" y="46.478873239436624"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+    <resources>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
