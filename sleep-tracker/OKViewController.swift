@@ -18,7 +18,7 @@ class OKViewController: UIViewController {
 		messageLabel.text = messageText
     }
 	
-	@IBAction func didTapOK(_ sender: Any) {
+	@IBAction private func didTapOK(_ sender: Any) {
 		dismiss(animated: true, completion: nil)
 	}
 	

@@ -19,6 +19,7 @@
 		CEBE17A927DF534C00234B8F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBE17A727DF534C00234B8F /* SettingsViewController.swift */; };
 		CEBE17AA27DF534C00234B8F /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEBE17A827DF534C00234B8F /* SettingsViewController.xib */; };
 		CEBE17AC27E0A29B00234B8F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBE17AB27E0A29B00234B8F /* ProfileViewController.swift */; };
+		CEC43BF027ED1D3500F72C80 /* ColoursExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC43BEF27ED1D3500F72C80 /* ColoursExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		CEBE17A727DF534C00234B8F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CEBE17A827DF534C00234B8F /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		CEBE17AB27E0A29B00234B8F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		CEC43BEF27ED1D3500F72C80 /* ColoursExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoursExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				CEBE178F27CE9E6700234B8F /* Main.storyboard */,
 				CEB47DBF27E3E0FD00123622 /* DiaryViewController.xib */,
 				CEB47DC127E3E5ED00123622 /* DiaryViewController.swift */,
+				CEC43BEF27ED1D3500F72C80 /* ColoursExtension.swift */,
 				CEBE17A527DE388300234B8F /* OKViewController.swift */,
 				CEBE179227CE9E6800234B8F /* Assets.xcassets */,
 				CEBE179427CE9E6800234B8F /* LaunchScreen.storyboard */,
@@ -163,6 +166,7 @@
 				CEBE178A27CE9E6700234B8F /* AppDelegate.swift in Sources */,
 				CEB47DC227E3E5ED00123622 /* DiaryViewController.swift in Sources */,
 				CEBE17A627DE388300234B8F /* OKViewController.swift in Sources */,
+				CEC43BF027ED1D3500F72C80 /* ColoursExtension.swift in Sources */,
 				CEBE17A927DF534C00234B8F /* SettingsViewController.swift in Sources */,
 				CEBE178C27CE9E6700234B8F /* SceneDelegate.swift in Sources */,
 			);

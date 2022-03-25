@@ -8,19 +8,16 @@
 import UIKit
 
 class DiaryViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-		
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		createDatePicker()
+	}
+	
+	private func createDatePicker() {
 		let datePicker = UIDatePicker()
 		datePicker.frame = CGRect(x: 10, y: 10, width: view.frame.width - 50, height: 50)
-		datePicker.backgroundColor = UIColor(named: "customPink")
-		datePicker.addTarget(self, action: #selector(datePickerValueChanged), for: .valueChanged)
+		datePicker.backgroundColor = .customPink
 		view.addSubview(datePicker)
-    }
-	
-	@objc func datePickerValueChanged(_ sender: UIDatePicker){
-			let dateFormatter = DateFormatter()
-			dateFormatter.dateFormat = "MM/dd/yyyy"
-		}
+	}
 }
