@@ -7,14 +7,15 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController {
 
-	@IBOutlet private weak var hoursField: UITextField!
+	@IBOutlet private var hoursField: UITextField!
 	private var dataToPass = -1
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		hoursField.text = ""
+        hoursField.delegate = self
 	}
 
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -33,8 +34,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
 	}
 	
 	@IBAction private func didTapProfile(_ sender: Any) {
-		let profileVC = ProfileViewController()
-		present(profileVC, animated: true)
+        let profileVC = ProfileViewController()
+        let navigationVC = UINavigationController(rootViewController: profileVC)
+        navigationVC.modalPresentationStyle = .fullScreen
+		present(navigationVC, animated: true)
 	}
 }
+
+extension ViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard (textField.text?.count ?? 0) < 2 || string.isEmpty else { return false }
+
+        print(string)
+        print(textField.text)
+        print("==")
+        return true
+    }
+}
+
 

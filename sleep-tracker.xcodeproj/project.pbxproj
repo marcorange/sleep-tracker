@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5EC596AE27F089EE0065169A /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC596AD27F089EE0065169A /* TableViewController.swift */; };
+		5EC596B027F08AC90065169A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC596AF27F08AC90065169A /* TableViewCell.swift */; };
+		5EC596B627F092DE0065169A /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC596B527F092DE0065169A /* CollectionViewCell.swift */; };
+		5EC596B927F095DA0065169A /* TableViewDiaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC596B727F095DA0065169A /* TableViewDiaryTableViewCell.swift */; };
+		5EC596BA27F095DA0065169A /* TableViewDiaryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EC596B827F095DA0065169A /* TableViewDiaryTableViewCell.xib */; };
+		5EC596BC27F09A460065169A /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC596BB27F09A460065169A /* GreenViewController.swift */; };
+		5EC596BE27F09A4E0065169A /* PInkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC596BD27F09A4E0065169A /* PInkViewController.swift */; };
+		5EC596C027F09E8A0065169A /* PictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC596BF27F09E8A0065169A /* PictureView.swift */; };
 		CEB47DC027E3E0FD00123622 /* DiaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB47DBF27E3E0FD00123622 /* DiaryViewController.xib */; };
 		CEB47DC227E3E5ED00123622 /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB47DC127E3E5ED00123622 /* DiaryViewController.swift */; };
 		CEBE178A27CE9E6700234B8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBE178927CE9E6700234B8F /* AppDelegate.swift */; };
@@ -23,6 +31,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5EC596AD27F089EE0065169A /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		5EC596AF27F08AC90065169A /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		5EC596B527F092DE0065169A /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		5EC596B727F095DA0065169A /* TableViewDiaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDiaryTableViewCell.swift; sourceTree = "<group>"; };
+		5EC596B827F095DA0065169A /* TableViewDiaryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewDiaryTableViewCell.xib; sourceTree = "<group>"; };
+		5EC596BB27F09A460065169A /* GreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
+		5EC596BD27F09A4E0065169A /* PInkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PInkViewController.swift; sourceTree = "<group>"; };
+		5EC596BF27F09E8A0065169A /* PictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureView.swift; sourceTree = "<group>"; };
 		CEB47DBF27E3E0FD00123622 /* DiaryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiaryViewController.xib; sourceTree = "<group>"; };
 		CEB47DC127E3E5ED00123622 /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
 		CEBE178627CE9E6700234B8F /* sleep-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sleep-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +67,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5EC596AA27F086B50065169A /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				5EC596AD27F089EE0065169A /* TableViewController.swift */,
+				5EC596BD27F09A4E0065169A /* PInkViewController.swift */,
+				5EC596BB27F09A460065169A /* GreenViewController.swift */,
+				5EC596AC27F086DE0065169A /* Diary */,
+				5EC596AB27F086CC0065169A /* Settings */,
+				CEBE178D27CE9E6700234B8F /* ViewController.swift */,
+				CEBE17AB27E0A29B00234B8F /* ProfileViewController.swift */,
+				5EC596BF27F09E8A0065169A /* PictureView.swift */,
+				5EC596AF27F08AC90065169A /* TableViewCell.swift */,
+				5EC596B527F092DE0065169A /* CollectionViewCell.swift */,
+				CEBE178F27CE9E6700234B8F /* Main.storyboard */,
+				CEBE17A527DE388300234B8F /* OKViewController.swift */,
+			);
+			name = Presentation;
+			sourceTree = "<group>";
+		};
+		5EC596AB27F086CC0065169A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				CEBE17A727DF534C00234B8F /* SettingsViewController.swift */,
+				CEBE17A827DF534C00234B8F /* SettingsViewController.xib */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		5EC596AC27F086DE0065169A /* Diary */ = {
+			isa = PBXGroup;
+			children = (
+				CEB47DBF27E3E0FD00123622 /* DiaryViewController.xib */,
+				CEB47DC127E3E5ED00123622 /* DiaryViewController.swift */,
+				5EC596B727F095DA0065169A /* TableViewDiaryTableViewCell.swift */,
+				5EC596B827F095DA0065169A /* TableViewDiaryTableViewCell.xib */,
+			);
+			name = Diary;
+			sourceTree = "<group>";
+		};
 		CEBE177D27CE9E6700234B8F = {
 			isa = PBXGroup;
 			children = (
@@ -72,15 +127,8 @@
 			children = (
 				CEBE178927CE9E6700234B8F /* AppDelegate.swift */,
 				CEBE178B27CE9E6700234B8F /* SceneDelegate.swift */,
-				CEBE178D27CE9E6700234B8F /* ViewController.swift */,
-				CEBE17A727DF534C00234B8F /* SettingsViewController.swift */,
-				CEBE17AB27E0A29B00234B8F /* ProfileViewController.swift */,
-				CEBE17A827DF534C00234B8F /* SettingsViewController.xib */,
-				CEBE178F27CE9E6700234B8F /* Main.storyboard */,
-				CEB47DBF27E3E0FD00123622 /* DiaryViewController.xib */,
-				CEB47DC127E3E5ED00123622 /* DiaryViewController.swift */,
+				5EC596AA27F086B50065169A /* Presentation */,
 				CEC43BEF27ED1D3500F72C80 /* ColoursExtension.swift */,
-				CEBE17A527DE388300234B8F /* OKViewController.swift */,
 				CEBE179227CE9E6800234B8F /* Assets.xcassets */,
 				CEBE179427CE9E6800234B8F /* LaunchScreen.storyboard */,
 				CEBE179727CE9E6800234B8F /* Info.plist */,
@@ -149,6 +197,7 @@
 				CEBE179627CE9E6800234B8F /* LaunchScreen.storyboard in Resources */,
 				CEBE179327CE9E6800234B8F /* Assets.xcassets in Resources */,
 				CEB47DC027E3E0FD00123622 /* DiaryViewController.xib in Resources */,
+				5EC596BA27F095DA0065169A /* TableViewDiaryTableViewCell.xib in Resources */,
 				CEBE179127CE9E6700234B8F /* Main.storyboard in Resources */,
 				CEBE17AA27DF534C00234B8F /* SettingsViewController.xib in Resources */,
 			);
@@ -161,14 +210,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EC596C027F09E8A0065169A /* PictureView.swift in Sources */,
 				CEBE17AC27E0A29B00234B8F /* ProfileViewController.swift in Sources */,
 				CEBE178E27CE9E6700234B8F /* ViewController.swift in Sources */,
 				CEBE178A27CE9E6700234B8F /* AppDelegate.swift in Sources */,
 				CEB47DC227E3E5ED00123622 /* DiaryViewController.swift in Sources */,
 				CEBE17A627DE388300234B8F /* OKViewController.swift in Sources */,
+				5EC596B027F08AC90065169A /* TableViewCell.swift in Sources */,
+				5EC596BC27F09A460065169A /* GreenViewController.swift in Sources */,
 				CEC43BF027ED1D3500F72C80 /* ColoursExtension.swift in Sources */,
+				5EC596BE27F09A4E0065169A /* PInkViewController.swift in Sources */,
 				CEBE17A927DF534C00234B8F /* SettingsViewController.swift in Sources */,
+				5EC596AE27F089EE0065169A /* TableViewController.swift in Sources */,
+				5EC596B927F095DA0065169A /* TableViewDiaryTableViewCell.swift in Sources */,
 				CEBE178C27CE9E6700234B8F /* SceneDelegate.swift in Sources */,
+				5EC596B627F092DE0065169A /* CollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +373,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MN5SDDPV9R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "sleep-tracker/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -344,6 +401,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MN5SDDPV9R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "sleep-tracker/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

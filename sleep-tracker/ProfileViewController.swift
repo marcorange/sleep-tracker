@@ -32,19 +32,19 @@ class ProfileViewController: UIViewController {
 	}
 	
 	private func createProfilePicture() {
-		let profilePicture = UIImageView()
-		profilePicture.translatesAutoresizingMaskIntoConstraints = false
-		profilePicture.image = UIImage(named: "marcel")
-		profilePicture.layer.masksToBounds = true
-		profilePicture.layer.borderColor = UIColor.white.cgColor
-		profilePicture.layer.borderWidth = 10
+		let profilePicture = PictureView()
+//		profilePicture.translatesAutoresizingMaskIntoConstraints = false
+//		profilePicture.image = UIImage(named: "marcel")
+//		profilePicture.layer.masksToBounds = true
+//		profilePicture.layer.borderColor = UIColor.white.cgColor
+//		profilePicture.layer.borderWidth = 10
 		view.addSubview(profilePicture)
 		
 		profilePicture.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
 		profilePicture.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
 		profilePicture.widthAnchor.constraint(equalToConstant: 175).isActive = true
 		profilePicture.heightAnchor.constraint(equalToConstant: 175).isActive = true
-		profilePicture.layer.cornerRadius = 175 / 2
+//		profilePicture.layer.cornerRadius = 175 / 2
 	}
 	
 	private func createUserName() {
@@ -89,7 +89,8 @@ class ProfileViewController: UIViewController {
 	
 	@IBAction func didTapDiary(sender: UIButton!) {
 		let diaryVC = DiaryViewController()
-		present(diaryVC, animated: true)
+        navigationController?.pushViewController(diaryVC, animated: true)
+//		present(diaryVC, animated: true)
 	}
 }
 

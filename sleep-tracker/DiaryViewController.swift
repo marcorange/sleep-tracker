@@ -8,10 +8,13 @@
 import UIKit
 
 class DiaryViewController: UIViewController {
-	
+    @IBOutlet var tableView: UITableView!
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		createDatePicker()
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: "TableViewDiaryTableViewCell", bundle: nil), forCellReuseIdentifier: "id3")
 	}
 	
 	private func createDatePicker() {
@@ -20,4 +23,19 @@ class DiaryViewController: UIViewController {
 		datePicker.backgroundColor = .customPink
 		view.addSubview(datePicker)
 	}
+}
+
+extension DiaryViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "id3", for: indexPath) as? TableViewDiaryTableViewCell else { return UITableViewCell() }
+
+//        cell.label.text = list[indexPath.row]
+//        cell.pic.image = UIImage(named: "marcel")
+
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
 }

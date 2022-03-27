@@ -8,9 +8,8 @@
 import UIKit
 
 class OKViewController: UIViewController {
-	
-	
-	@IBOutlet weak var messageLabel: UILabel!
+
+	@IBOutlet private var messageLabel: UILabel!
 	var messageText = ""
 	
 	override func viewDidLoad() {
