@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController {
 
 	@IBOutlet private weak var hoursField: UITextField!
 	private var dataToPass = -1
@@ -15,6 +15,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		hoursField.text = ""
+//		hoursField.delegate = self
 	}
 
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -38,3 +39,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
 	}
 }
 
+extension ViewController: UITextFieldDelegate {
+	func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+		guard (textField.text?.count ?? 0) < 2 || string.isEmpty else { return false }
+		return true
+	}
+}
