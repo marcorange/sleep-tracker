@@ -1,42 +1,33 @@
 //
-//  DiaryViewController.swift
+//  TestViewController.swift
 //  sleep-tracker
 //
-//  Created by disco on 18.03.2022.
+//  Created by disco on 31.03.2022.
 //
 
 import UIKit
 
 class DiaryViewController: UIViewController {
-	
-	@IBOutlet var recordsTableView: UITableView!
-	
-	override func viewDidLoad() {
-		super.viewDidLoad()
-//		createDatePicker()
-		recordsTableView.dataSource = self
-		recordsTableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "one")
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+    }
+    
+	@IBAction func didTapDiarySleepRecords() {
+		let diaryVC = SleepRecordsViewController()
+		navigationController?.pushViewController(diaryVC, animated: true)
 	}
 	
-	private func createDatePicker() {
-		let datePicker = UIDatePicker()
-		datePicker.frame = CGRect(x: 10, y: 10, width: view.frame.width - 50, height: 50)
-		datePicker.backgroundColor = .customPink
-		view.addSubview(datePicker)
-	}
-}
+    /*
+    // MARK: - Navigation
 
-extension DiaryViewController: UITableViewDataSource {
-	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		guard let cell = tableView.dequeueReusableCell(withIdentifier: "one", for: indexPath) as? TableViewCell else { return UITableViewCell() }
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
-//        cell.label.text = list[indexPath.row]
-//        cell.pic.image = UIImage(named: "marcel")
-
-		return cell
-	}
-
-	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 5
-	}
 }

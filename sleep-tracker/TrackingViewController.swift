@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TrackingViewController: UIViewController {
 
 	@IBOutlet private weak var hoursField: UITextField!
 	private var dataToPass = -1
@@ -35,11 +35,12 @@ class ViewController: UIViewController {
 	
 	@IBAction private func didTapProfile(_ sender: Any) {
 		let profileVC = ProfileViewController()
-		present(profileVC, animated: true)
+//		present(profileVC, animated: true)
+		navigationController?.pushViewController(profileVC, animated: true)
 	}
 }
 
-extension ViewController: UITextFieldDelegate {
+extension TrackingViewController: UITextFieldDelegate {
 	func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
 		guard (textField.text?.count ?? 0) < 2 || string.isEmpty else { return false }
 		return true
