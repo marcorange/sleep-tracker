@@ -15,7 +15,7 @@ class TrackingViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		hoursField.text = ""
-//		hoursField.delegate = self
+		hoursField.delegate = self
 	}
 
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -27,15 +27,8 @@ class TrackingViewController: UIViewController {
 		}
 	}
 	
-	@IBAction private func didTapSettings(_ sender: Any) {
-		let vc = SettingsViewController()
-		vc.passedData = dataToPass
-		present(vc, animated: true)
-	}
-	
 	@IBAction private func didTapProfile(_ sender: Any) {
 		let profileVC = ProfileViewController()
-//		present(profileVC, animated: true)
 		navigationController?.pushViewController(profileVC, animated: true)
 	}
 }

@@ -15,8 +15,7 @@ class ProfileViewController: UIViewController {
 		createTitle()
 		createProfilePicture()
 		createUserName()
-		createBackButton()
-		createDiaryButton()
+		createSettingsButton()
 	}
 	
 	private func createTitle() {
@@ -28,12 +27,13 @@ class ProfileViewController: UIViewController {
 		view.addSubview(titleLabel)
 		
 		titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-		titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 75).isActive = true
+		titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 150).isActive = true
 	}
 	
 	private func createProfilePicture() {
-		let profilePicture = PictureView()
+		let profilePicture = UserPicView()
 		profilePicture.imageName = "marcel"
+		profilePicture.translatesAutoresizingMaskIntoConstraints = false
 		view.addSubview(profilePicture)
 		
 		profilePicture.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -52,7 +52,7 @@ class ProfileViewController: UIViewController {
 		view.addSubview(userNameLabel)
 		
 		userNameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-		userNameLabel.bottomAnchor.constraint(equalTo: view.topAnchor, constant: 390).isActive = true
+		userNameLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -200).isActive = true
 	}
 	
 	private func createBackButton() {
@@ -67,26 +67,26 @@ class ProfileViewController: UIViewController {
 		view.addSubview(backButton)
 	}
 	
-	private func createDiaryButton() {
-		let diaryButton = UIButton()
-		diaryButton.frame = CGRect(x: view.frame.size.width / 2 - 90, y: view.frame.size.height - 125, width: 180, height: 60)
-		diaryButton.backgroundColor = UIColor.systemIndigo
-		diaryButton.layer.cornerRadius = 30
-		diaryButton.setTitle("Open Diary", for: .normal)
-		diaryButton.setTitleColor(.white, for: .normal)
-		diaryButton.titleLabel?.font = UIFont(name: "Arial Rounded MT Bold", size: 20)
-		diaryButton.addTarget(self, action: #selector(didTapDiary), for: .touchUpInside)
-		view.addSubview(diaryButton)
+	private func createSettingsButton() {
+		let button = UIButton()
+		button.frame = CGRect(x: view.frame.size.width / 2 - 90, y: view.frame.size.height - 125, width: 180, height: 60)
+		button.backgroundColor = UIColor.systemIndigo
+		button.layer.cornerRadius = 30
+		button.setTitle("Settings", for: .normal)
+		button.setTitleColor(.white, for: .normal)
+		button.titleLabel?.font = UIFont(name: "Arial Rounded MT Bold", size: 20)
+		button.addTarget(self, action: #selector(didTapSettings), for: .touchUpInside)
+		view.addSubview(button)
 	}
 	
 	@IBAction func didTapBack(sender: UIButton!) {
 		dismiss(animated: true, completion: nil)
 	}
 	
-	@IBAction func didTapDiary(sender: UIButton!) {
-		let diaryVC = DiaryViewController()
-		navigationController?.pushViewController(diaryVC, animated: true)
-		present(diaryVC, animated: true)
+	@IBAction private func didTapSettings(_ sender: Any) {
+		let settingsVC = SettingsViewController()
+//		settingsVC.passedData = dataToPass
+		navigationController?.pushViewController(settingsVC, animated: true)
 	}
 }
 

@@ -7,14 +7,13 @@
 
 import UIKit
 
-class PictureView: UIImageView {
+class UserPicView: UIImageView {
 
 	var imageName = ""
 
 	override func layoutSubviews() {
 		super.layoutSubviews()
 
-		translatesAutoresizingMaskIntoConstraints = false
 		image = UIImage(named: imageName)
 		layer.masksToBounds = true
 		layer.borderColor = UIColor.white.cgColor

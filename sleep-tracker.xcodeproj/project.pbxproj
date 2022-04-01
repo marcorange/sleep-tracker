@@ -23,7 +23,8 @@
 		CEC5D20B27F2287C007BB045 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5D20927F2287C007BB045 /* TableViewCell.swift */; };
 		CEC5D20C27F2287C007BB045 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC5D20A27F2287C007BB045 /* TableViewCell.xib */; };
 		CEC5D21227F502AD007BB045 /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5D21127F502AD007BB045 /* DiaryViewController.swift */; };
-		CEC5D21427F51BBD007BB045 /* PictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5D21327F51BBD007BB045 /* PictureView.swift */; };
+		CEC5D21427F51BBD007BB045 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5D21327F51BBD007BB045 /* ProfileView.swift */; };
+		CEC5D21627F6578E007BB045 /* InitialTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5D21527F6578E007BB045 /* InitialTabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +46,8 @@
 		CEC5D20927F2287C007BB045 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		CEC5D20A27F2287C007BB045 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		CEC5D21127F502AD007BB045 /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
-		CEC5D21327F51BBD007BB045 /* PictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureView.swift; sourceTree = "<group>"; };
+		CEC5D21327F51BBD007BB045 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		CEC5D21527F6578E007BB045 /* InitialTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialTabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				CEBE178B27CE9E6700234B8F /* SceneDelegate.swift */,
 				CEBE178D27CE9E6700234B8F /* TrackingViewController.swift */,
 				CEBE178F27CE9E6700234B8F /* Main.storyboard */,
+				CEC5D21527F6578E007BB045 /* InitialTabBar.swift */,
 				CEC5D20627F22667007BB045 /* Settings */,
 				CEC5D20827F226D9007BB045 /* Profile */,
 				CEC5D20727F226AF007BB045 /* Diary */,
@@ -119,7 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				CEBE17AB27E0A29B00234B8F /* ProfileViewController.swift */,
-				CEC5D21327F51BBD007BB045 /* PictureView.swift */,
+				CEC5D21327F51BBD007BB045 /* ProfileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -202,8 +205,9 @@
 				CEBE17AC27E0A29B00234B8F /* ProfileViewController.swift in Sources */,
 				CEBE178E27CE9E6700234B8F /* TrackingViewController.swift in Sources */,
 				CEBE178A27CE9E6700234B8F /* AppDelegate.swift in Sources */,
+				CEC5D21627F6578E007BB045 /* InitialTabBar.swift in Sources */,
 				CEC5D20B27F2287C007BB045 /* TableViewCell.swift in Sources */,
-				CEC5D21427F51BBD007BB045 /* PictureView.swift in Sources */,
+				CEC5D21427F51BBD007BB045 /* ProfileView.swift in Sources */,
 				CEB47DC227E3E5ED00123622 /* SleepRecordsViewController.swift in Sources */,
 				CEBE17A627DE388300234B8F /* OKViewController.swift in Sources */,
 				CEC43BF027ED1D3500F72C80 /* ColoursExtension.swift in Sources */,

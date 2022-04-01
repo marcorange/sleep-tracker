@@ -59,22 +59,6 @@
                         <action selector="refreshDidTap:" destination="-1" eventType="touchUpInside" id="t0b-QU-gnM"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mvc-98-sy0">
-                    <rect key="frame" x="16" y="20" width="68" height="28"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="28" id="ozW-Da-4ns"/>
-                        <constraint firstAttribute="width" constant="68" id="u3D-v5-aTc"/>
-                    </constraints>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title="Back">
-                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="0.0"/>
-                        <color key="baseForegroundColor" red="0.19593480229999999" green="0.31360459330000001" blue="0.70468747620000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="baseBackgroundColor" red="0.79129339724170922" green="0.38156522374574831" blue="0.99911564590000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </buttonConfiguration>
-                    <connections>
-                        <action selector="backDidTap:" destination="-1" eventType="touchUpInside" id="aa9-fh-DTW"/>
-                    </connections>
-                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2XJ-x5-Uxg">
                     <rect key="frame" x="128" y="184" width="64.5" height="35"/>
                     <constraints>
@@ -96,12 +80,10 @@
                 <constraint firstItem="2XJ-x5-Uxg" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="BzM-CO-Urr"/>
                 <constraint firstItem="aUH-Tl-DJu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="93" id="Lbo-6k-Utm"/>
                 <constraint firstItem="pDT-yR-q2i" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="26" id="RnT-vS-g3Q"/>
-                <constraint firstItem="Mvc-98-sy0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="WGh-L4-TrM"/>
                 <constraint firstItem="pDT-yR-q2i" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="crD-9s-PhJ"/>
                 <constraint firstItem="rN2-fV-etM" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="f7m-NE-bh6"/>
                 <constraint firstItem="24y-Fm-3Sf" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="gge-UP-2V4"/>
                 <constraint firstItem="pDT-yR-q2i" firstAttribute="top" secondItem="rN2-fV-etM" secondAttribute="bottom" constant="21" id="iZz-cF-7hA"/>
-                <constraint firstItem="Mvc-98-sy0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="kHq-Wk-Ct3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pDT-yR-q2i" secondAttribute="trailing" constant="26" id="l6h-UQ-EjN"/>
                 <constraint firstItem="aUH-Tl-DJu" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="ldI-58-dsF"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="pDT-yR-q2i" secondAttribute="bottom" constant="42" id="sIQ-v9-j47"/>
