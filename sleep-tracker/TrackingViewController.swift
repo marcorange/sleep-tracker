@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class TrackingViewController: UIViewController {
 
 	@IBOutlet private weak var hoursField: UITextField!
 	private var dataToPass = -1
@@ -15,6 +15,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		hoursField.text = ""
+		hoursField.delegate = self
 	}
 
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -26,15 +27,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
 		}
 	}
 	
-	@IBAction private func didTapSettings(_ sender: Any) {
-		let vc = SettingsViewController()
-		vc.passedData = dataToPass
-		present(vc, animated: true)
-	}
-	
 	@IBAction private func didTapProfile(_ sender: Any) {
 		let profileVC = ProfileViewController()
-		present(profileVC, animated: true)
+		navigationController?.pushViewController(profileVC, animated: true)
 	}
 }
 
+extension TrackingViewController: UITextFieldDelegate {
+	func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+		guard (textField.text?.count ?? 0) < 2 || string.isEmpty else { return false }
+		return true
+	}
+}

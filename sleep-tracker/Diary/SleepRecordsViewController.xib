@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SleepRecordsViewController" customModule="sleep_tracker" customModuleProvider="target">
+            <connections>
+                <outlet property="recordsTableView" destination="ExE-MY-4nj" id="Yz9-iY-aJ6"/>
+                <outlet property="view" destination="NfA-lm-PEB" id="x4j-Ym-Ry0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="NfA-lm-PEB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ExE-MY-4nj">
+                    <rect key="frame" x="0.0" y="75" width="320" height="493"/>
+                    <color key="backgroundColor" red="0.99994145607461737" green="0.90541180461442394" blue="0.98233622310000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="separatorColor" systemColor="systemGray4Color"/>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idu-0R-SW0">
+                    <rect key="frame" x="25" y="25" width="56.5" height="29"/>
+                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
+                    <color key="textColor" red="0.28235294119999998" green="0.44556277989999998" blue="0.99911564590000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tov-1N-AFN">
+                    <rect key="frame" x="130" y="25" width="60" height="29"/>
+                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
+                    <color key="textColor" red="0.28235294119999998" green="0.44556277989999998" blue="0.99911564590000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="m7L-Yh-jD4"/>
+            <color key="backgroundColor" red="0.87682835585406038" green="0.44556277989999998" blue="0.99911564590000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="idu-0R-SW0" firstAttribute="leading" secondItem="m7L-Yh-jD4" secondAttribute="leading" constant="25" id="S7e-KM-I4Y"/>
+                <constraint firstItem="ExE-MY-4nj" firstAttribute="leading" secondItem="m7L-Yh-jD4" secondAttribute="leading" id="Vky-PZ-xlU"/>
+                <constraint firstItem="tov-1N-AFN" firstAttribute="centerX" secondItem="m7L-Yh-jD4" secondAttribute="centerX" id="hx8-mq-c9c"/>
+                <constraint firstItem="idu-0R-SW0" firstAttribute="top" secondItem="m7L-Yh-jD4" secondAttribute="top" constant="25" id="i1G-0C-XOP"/>
+                <constraint firstItem="m7L-Yh-jD4" firstAttribute="trailing" secondItem="ExE-MY-4nj" secondAttribute="trailing" id="lDs-Hy-Cl2"/>
+                <constraint firstItem="ExE-MY-4nj" firstAttribute="top" secondItem="m7L-Yh-jD4" secondAttribute="top" constant="75" id="nBA-Ju-vd9"/>
+                <constraint firstItem="m7L-Yh-jD4" firstAttribute="bottom" secondItem="ExE-MY-4nj" secondAttribute="bottom" id="toI-kE-hZ7"/>
+                <constraint firstItem="tov-1N-AFN" firstAttribute="top" secondItem="m7L-Yh-jD4" secondAttribute="top" constant="25" id="wXe-fK-aeI"/>
+            </constraints>
+            <point key="canvasLocation" x="-230.625" y="-13.732394366197184"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
